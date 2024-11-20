@@ -47,24 +47,9 @@ public class App {
     static MyIOClientFactory myIoClientFactory = new MyIOClientFactory();
 
     public static Resolver makeResolver(String resolver) throws UnknownHostException {
-        /**
-        SimpleResolver answ = resolverMap.computeIfAbsent(resolver,
-                key -> {
-                    try {
-                        SimpleResolver res = new SimpleResolver(key);
-                        res.setLocalAddress(new InetSocketAddress(0));
-                        res.setIoClientFactory(myIoClientFactory);
-                        res.setTCP(true);
-                        return res;
-                    } catch (Exception ex) {
-                        return null;
-                    }
-                });
-          return answ;
-         */
         SimpleResolver res = new SimpleResolver(resolver);
         res.setLocalAddress(new InetSocketAddress(0));
-        res.setIoClientFactory(myIoClientFactory);
+        // res.setIoClientFactory(myIoClientFactory);
         res.setTCP(true);
         return res;
 

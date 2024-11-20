@@ -5,6 +5,9 @@ import org.xbill.DNS.io.DefaultIoClientFactory;
 import org.xbill.DNS.io.TcpIoClient;
 import org.xbill.DNS.io.UdpIoClient;
 
+/**
+ * Test to see if creating a new client would help...
+ */
 public class MyIOClientFactory extends DefaultIoClientFactory {
 
 
